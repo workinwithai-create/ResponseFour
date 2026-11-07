@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ResponseFour — call-and-response desk</title>
+  <meta name="description" content="Four live-instrument bars that answer the hook so it does not photocopy itself." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>ResponseFour</h1>
+  <p class="lead">Call-and-response desk. Hooks stall on the same phrase. Session players write four live bars that answer the call — trumpet line, violin answer, kit reply, bass walk, nylon figure — so the section has a conversation. Then it can land or return. Live FluidR3 piano, upright, nylon, kit, trumpet, violin. Not a tag. Not a lift. Not a key change.</p>
+  <p class="status" id="status">Tap to start audio · seating chairs…</p>
+  <div class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="98" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>E major</option><option>D minor</option><option>G major</option></select></label>
+    <label>Chords (optional) <input type="text" id="chords" placeholder="Am F C G" /></label>
+  </div>
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Response recipe</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · call 1–4 · response 5–8</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <p class="note">iOS silent switch mutes Web Audio. Hardware MIDI keyboard supported for live play.</p>
+</main>
+<div class="dock">
+  <button id="playA">A · Call loop</button>
+  <button id="playB">B · Full form</button>
+  <button id="play8">8 · Response only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="exportWav">Export WAV</button>
+  <button class="ghost" id="exportMid">Export MIDI</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
